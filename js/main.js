@@ -72,7 +72,11 @@ checkbox.addEventListener("change", () => {
         fadeIn(audio);
 
     } else {
-        fadeOut(audio, () => {
+        // Solución móvil: pausar inmediatamente al toque
+        if (isMobile()) {
+            audio.pause();
+        }
+            fadeOut(audio, () => {
             audio.pause();
             audio.currentTime = 0;
             if (currentAudio === audio) currentAudio = null;
