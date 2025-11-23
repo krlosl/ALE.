@@ -4,11 +4,17 @@ body {
   background-color: #1A1A1A;
   font-family: "Poppins";
 }
+<<<<<<< HEAD
 
 a {
   text-decoration: none;
 }
 
+=======
+a {
+  text-decoration: none;
+}
+>>>>>>> cec7ccb3522a82792641cf3b268898a30c076949
 #logo {
   width: 130px;
   display: block;
@@ -235,6 +241,10 @@ a {
   .container {
     --size: 35px;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cec7ccb3522a82792641cf3b268898a30c076949
   #preview {
     margin-top: 80px;
     font-size: 28px;
