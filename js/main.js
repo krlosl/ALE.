@@ -5,6 +5,11 @@ const FADE_TIME = 80;
 let currentAudio = null;
 let fadeIntervals = new Map();
 
+// comprueba si es un navegador en móvil
+function isMobile() {
+    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 // Limpia fade activo de un audio
 function clearFade(audio) {
     if (fadeIntervals.has(audio)) {
@@ -68,11 +73,17 @@ checkbox.addEventListener("change", () => {
 
     } else {
 
-        fadeOut(audio, () => {
+            // Solución móvil: pausar inmediatamente al toque
+            if (isMobile()) {
+            audio.pause();
+        }
+
+            fadeOut(audio, () => {
             audio.pause();
             audio.currentTime = 0;
             if (currentAudio === audio) currentAudio = null;
         });
+
     }
 
 });
