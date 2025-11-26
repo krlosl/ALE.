@@ -80,6 +80,21 @@ a {
   font-size: 18px;
   font-family: monospace, bold;
 }
+.caption-musa {
+  margin-top: -12px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-family: monospace, bold;
+}
+
+.ft {
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: monospace, bold;
+}
 
 .track_link {
   color: white;
